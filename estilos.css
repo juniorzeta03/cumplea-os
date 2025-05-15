@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff9f9;
+    color: #333;
+    text-align: center;
+}
+
+#pantalla-carga {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #ffe0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#pantalla-carga h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#pantalla-carga button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #ff66b2;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pantalla-carga button:hover {
+    background-color: #ff3399;
+}
+
+.oculto {
+    display: none;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #cc007a;
+}
+
+.edad {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.galeria {
+    background-color:rgb(171, 219, 238);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    max-width: 100%;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+#imagen-ampliada {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    padding: 10px;
+}
+
+#imagen-ampliada img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+#descripcion-img {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+#btn-carta {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #ff80c0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-carta:hover {
+    background-color: #ff3399;
+}
+
+#flor-carga {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1s;
+}
+
+#flor-carga img {
+    max-width: 200px;
+}
+
+#carta .contenido-carta {
+    max-width: 500px;
+    background-color: #fff0f6;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease;
+}
+
+#carta .mini {
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}.modal-carta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.contenido-carta-texto {
+    background: #c491a5;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.flor-css {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at center, pink 40%, transparent 41%),
+                radial-gradient(circle at center, pink 40%, transparent 41%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: girar 1.5s linear infinite;
+    border-radius: 50%;
+}
+
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+button{
+    background-color: red;
+    
+}
+
+
